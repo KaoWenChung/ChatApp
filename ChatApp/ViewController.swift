@@ -8,10 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        title = "Message"
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .systemCyan
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
 
 
