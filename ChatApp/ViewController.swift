@@ -16,19 +16,45 @@ class ViewController: UIViewController {
         appearance.backgroundColor = .systemCyan
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        messageTableView.register(UINib(nibName: "RightFirstMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "RightFirstMessageTableViewCell")
+        messageTableView.register(UINib(nibName: "RightFirstBubbleTableViewCell", bundle: nil), forCellReuseIdentifier: "RightFirstBubbleTableViewCell")
+        messageTableView.register(UINib(nibName: "RightOthersBubbleTableViewCell", bundle: nil), forCellReuseIdentifier: "RightOthersBubbleTableViewCell")
     }
 }
 
-let mockContent = ["conent", "conentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconent"]
+let mockContent = [ChatBubble(type: .rightOthers, content: "conent", userName: "Mike"),
+                   ChatBubble(type: .rightFirst, content: "conentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconent", userName: "Mike")]
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mockContent.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RightFirstMessageTableViewCell") as? RightFirstMessageTableViewCell else { return UITableViewCell() }
-        cell.set(mockContent[indexPath.row])
+        let bubbleContent = mockContent[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: bubbleContent.type.rawValue) as? ChatBubbleTableViewCell else { return UITableViewCell() }
+        
+        cell.set(bubbleContent)
         return cell
+    }
+}
+
+protocol ChatBubbleTableViewCell: UITableViewCell {
+    func set(_ content: ChatBubble)
+}
+
+
+struct ChatBubble {
+    enum ChatBubbleType: String {
+        case rightFirst = "RightFirstBubbleTableViewCell"
+        case rightOthers = "RightOthersBubbleTableViewCell"
+        case leftFirst = "LeftFirstBubbleTableViewCell"
+        case leftOthers = "LeftOthersBubbleTableViewCell"
+    }
+    let type: ChatBubbleType
+    let content: String
+    let userName: String
+    init(type: ChatBubbleType, content: String, userName: String) {
+        self.type = type
+        self.content = content
+        self.userName = userName
     }
 }

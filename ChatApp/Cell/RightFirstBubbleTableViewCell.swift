@@ -7,11 +7,11 @@
 
 import UIKit
 
-class RightFirstMessageTableViewCell: UITableViewCell {
+class RightFirstBubbleTableViewCell: UITableViewCell, ChatBubbleTableViewCell {
     
     @IBOutlet weak private var contentLabel: UILabel!
 
-    func set(_ content: String) {
-        contentLabel.text = content
+    func set(_ content: ChatBubble) {
+        contentLabel.text = content.content
     }
 }
