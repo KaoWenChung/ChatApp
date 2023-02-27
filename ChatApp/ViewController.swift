@@ -20,15 +20,15 @@ class ViewController: UIViewController {
     }
 }
 
+let mockContent = ["conent", "conentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconent"]
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return mockContent.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "RightFirstMessageTableViewCell") as? RightFirstMessageTableViewCell else { return UITableViewCell() }
+        cell.set(mockContent[indexPath.row])
         return cell
     }
-    
-    
 }

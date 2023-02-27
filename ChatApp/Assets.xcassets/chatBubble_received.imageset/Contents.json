@@ -1,14 +1,14 @@
 {
   "images" : [
     {
-      "filename" : "6314-2-02.png",
+      "filename" : "chatBubble_received.png",
       "idiom" : "universal",
       "resizing" : {
         "cap-insets" : {
-          "bottom" : 63,
-          "left" : 88,
-          "right" : 58,
-          "top" : 63
+          "bottom" : 12,
+          "left" : 14,
+          "right" : 9,
+          "top" : 12
         },
         "center" : {
           "height" : 1,

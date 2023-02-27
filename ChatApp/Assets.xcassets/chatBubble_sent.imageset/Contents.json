@@ -1,14 +1,14 @@
 {
   "images" : [
     {
-      "filename" : "6314-01.png",
+      "filename" : "output-onlinepngtools (1).png",
       "idiom" : "universal",
       "resizing" : {
         "cap-insets" : {
-          "bottom" : 63,
-          "left" : 58,
-          "right" : 88,
-          "top" : 63
+          "bottom" : 12,
+          "left" : 9,
+          "right" : 14,
+          "top" : 12
         },
         "center" : {
           "height" : 1,
