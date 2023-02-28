@@ -10,29 +10,27 @@ import UIKit
 class PushKeyboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        let notificationCenter = NotificationCenter.default
+            
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            if view.frame.size.height == UIScreen.main.bounds.height {
-                view.frame.size.height -= keyboardSize.height
-            }
-        }
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        guard view.frame.size.height == UIScreen.main.bounds.height else { return }
+        view.frame.size.height -= keyboardSize.height
     }
 
     @objc func keyboardWillHide(notification: NSNotification) {
         // Reset the position of your view to its original state
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            if view.frame.size.height != UIScreen.main.bounds.height {
-                view.frame.size.height += keyboardSize.height
-            }
-        }
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        guard view.frame.size.height != UIScreen.main.bounds.height else { return }
+        view.frame.size.height += keyboardSize.height
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+
+    @objc func appMovedToBackground() {
         view.endEditing(true)
     }
 
@@ -41,5 +39,10 @@ class PushKeyboardViewController: UIViewController {
         view.endEditing(true)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        view.endEditing(true)
     }
 }
