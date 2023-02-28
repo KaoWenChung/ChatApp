@@ -18,11 +18,11 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Z2-5f-Vcg">
-                        <rect key="frame" x="240.66666666666666" y="3" width="67.333333333333343" height="94"/>
+                        <rect key="frame" x="234.33333333333334" y="3" width="73.666666666666657" height="94"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="content" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjQ-oH-3mE">
-                                <rect key="frame" x="12.000000000000004" y="6" width="43.333333333333343" height="82"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <rect key="frame" x="11.999999999999996" y="6" width="49.666666666666657" height="82"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -44,7 +44,7 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="8Z2-5f-Vcg" secondAttribute="bottom" constant="3" id="8Ll-gK-5YS"/>
                     <constraint firstItem="8Z2-5f-Vcg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="IpJ-E8-xfX"/>
-                    <constraint firstItem="8Z2-5f-Vcg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" id="j2S-so-4fb"/>
+                    <constraint firstItem="8Z2-5f-Vcg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="j2S-so-4fb"/>
                     <constraint firstAttribute="trailing" secondItem="8Z2-5f-Vcg" secondAttribute="trailing" constant="12" id="o9c-CY-EFa"/>
                 </constraints>
             </tableViewCellContentView>

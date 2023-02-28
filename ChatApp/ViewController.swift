@@ -18,11 +18,15 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
         messageTableView.register(UINib(nibName: "RightFirstBubbleTableViewCell", bundle: nil), forCellReuseIdentifier: "RightFirstBubbleTableViewCell")
         messageTableView.register(UINib(nibName: "RightOthersBubbleTableViewCell", bundle: nil), forCellReuseIdentifier: "RightOthersBubbleTableViewCell")
+        messageTableView.register(UINib(nibName: "LeftFirstBubbleTableViewCell", bundle: nil), forCellReuseIdentifier: "LeftFirstBubbleTableViewCell")
+        messageTableView.register(UINib(nibName: "LeftOthersBubbleTableViewCell", bundle: nil), forCellReuseIdentifier: "LeftOthersBubbleTableViewCell")
     }
 }
 
 let mockContent = [ChatBubble(type: .rightOthers, content: "conent", userName: "Mike"),
-                   ChatBubble(type: .rightFirst, content: "conentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconent", userName: "Mike")]
+                   ChatBubble(type: .rightFirst, content: "conentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconent", userName: "Mike"),
+                   ChatBubble(type: .leftOthers, content: "conentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconentconent", userName: "Jay"),
+                   ChatBubble(type: .leftFirst, content: "conentconentconent", userName: "Jay")]
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mockContent.count

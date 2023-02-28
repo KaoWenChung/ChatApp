@@ -17,6 +17,10 @@
 		210B337329A969C30044079F /* RightFirstBubbleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 210B337129A969C30044079F /* RightFirstBubbleTableViewCell.xib */; };
 		21D89CC629ACED0B0026D8FC /* RightOthersBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D89CC429ACED0B0026D8FC /* RightOthersBubbleTableViewCell.swift */; };
 		21D89CC729ACED0B0026D8FC /* RightOthersBubbleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D89CC529ACED0B0026D8FC /* RightOthersBubbleTableViewCell.xib */; };
+		21D89CCA29AE059F0026D8FC /* LeftFirstBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D89CC829AE059F0026D8FC /* LeftFirstBubbleTableViewCell.swift */; };
+		21D89CCB29AE059F0026D8FC /* LeftFirstBubbleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D89CC929AE059F0026D8FC /* LeftFirstBubbleTableViewCell.xib */; };
+		21D89CCE29AE0C6F0026D8FC /* LeftOthersBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D89CCC29AE0C6F0026D8FC /* LeftOthersBubbleTableViewCell.swift */; };
+		21D89CCF29AE0C6F0026D8FC /* LeftOthersBubbleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D89CCD29AE0C6F0026D8FC /* LeftOthersBubbleTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		210B337129A969C30044079F /* RightFirstBubbleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightFirstBubbleTableViewCell.xib; sourceTree = "<group>"; };
 		21D89CC429ACED0B0026D8FC /* RightOthersBubbleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightOthersBubbleTableViewCell.swift; sourceTree = "<group>"; };
 		21D89CC529ACED0B0026D8FC /* RightOthersBubbleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightOthersBubbleTableViewCell.xib; sourceTree = "<group>"; };
+		21D89CC829AE059F0026D8FC /* LeftFirstBubbleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftFirstBubbleTableViewCell.swift; sourceTree = "<group>"; };
+		21D89CC929AE059F0026D8FC /* LeftFirstBubbleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftFirstBubbleTableViewCell.xib; sourceTree = "<group>"; };
+		21D89CCC29AE0C6F0026D8FC /* LeftOthersBubbleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftOthersBubbleTableViewCell.swift; sourceTree = "<group>"; };
+		21D89CCD29AE0C6F0026D8FC /* LeftOthersBubbleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftOthersBubbleTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,10 @@
 				21D89CC529ACED0B0026D8FC /* RightOthersBubbleTableViewCell.xib */,
 				210B337029A969C30044079F /* RightFirstBubbleTableViewCell.swift */,
 				210B337129A969C30044079F /* RightFirstBubbleTableViewCell.xib */,
+				21D89CC829AE059F0026D8FC /* LeftFirstBubbleTableViewCell.swift */,
+				21D89CC929AE059F0026D8FC /* LeftFirstBubbleTableViewCell.xib */,
+				21D89CCC29AE0C6F0026D8FC /* LeftOthersBubbleTableViewCell.swift */,
+				21D89CCD29AE0C6F0026D8FC /* LeftOthersBubbleTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -146,7 +158,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				21D89CC729ACED0B0026D8FC /* RightOthersBubbleTableViewCell.xib in Resources */,
+				21D89CCF29AE0C6F0026D8FC /* LeftOthersBubbleTableViewCell.xib in Resources */,
 				210B336829A961F90044079F /* LaunchScreen.storyboard in Resources */,
+				21D89CCB29AE059F0026D8FC /* LeftFirstBubbleTableViewCell.xib in Resources */,
 				210B337329A969C30044079F /* RightFirstBubbleTableViewCell.xib in Resources */,
 				210B336529A961F90044079F /* Assets.xcassets in Resources */,
 				210B336329A961F70044079F /* Main.storyboard in Resources */,
@@ -163,8 +177,10 @@
 				210B336029A961F70044079F /* ViewController.swift in Sources */,
 				210B337229A969C30044079F /* RightFirstBubbleTableViewCell.swift in Sources */,
 				21D89CC629ACED0B0026D8FC /* RightOthersBubbleTableViewCell.swift in Sources */,
+				21D89CCE29AE0C6F0026D8FC /* LeftOthersBubbleTableViewCell.swift in Sources */,
 				210B335C29A961F70044079F /* AppDelegate.swift in Sources */,
 				210B335E29A961F70044079F /* SceneDelegate.swift in Sources */,
+				21D89CCA29AE059F0026D8FC /* LeftFirstBubbleTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
