@@ -21,6 +21,7 @@
 		21D89CCB29AE059F0026D8FC /* LeftFirstBubbleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D89CC929AE059F0026D8FC /* LeftFirstBubbleTableViewCell.xib */; };
 		21D89CCE29AE0C6F0026D8FC /* LeftOthersBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D89CCC29AE0C6F0026D8FC /* LeftOthersBubbleTableViewCell.swift */; };
 		21D89CCF29AE0C6F0026D8FC /* LeftOthersBubbleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D89CCD29AE0C6F0026D8FC /* LeftOthersBubbleTableViewCell.xib */; };
+		21D89CD129AE17ED0026D8FC /* ShowKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D89CD029AE17ED0026D8FC /* ShowKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		21D89CC929AE059F0026D8FC /* LeftFirstBubbleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftFirstBubbleTableViewCell.xib; sourceTree = "<group>"; };
 		21D89CCC29AE0C6F0026D8FC /* LeftOthersBubbleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftOthersBubbleTableViewCell.swift; sourceTree = "<group>"; };
 		21D89CCD29AE0C6F0026D8FC /* LeftOthersBubbleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftOthersBubbleTableViewCell.xib; sourceTree = "<group>"; };
+		21D89CD029AE17ED0026D8FC /* ShowKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				210B335B29A961F70044079F /* AppDelegate.swift */,
 				210B335D29A961F70044079F /* SceneDelegate.swift */,
 				210B335F29A961F70044079F /* ViewController.swift */,
+				21D89CD029AE17ED0026D8FC /* ShowKeyboard.swift */,
 				210B336F29A969240044079F /* Cell */,
 				210B336129A961F70044079F /* Main.storyboard */,
 				210B336429A961F90044079F /* Assets.xcassets */,
@@ -181,6 +184,7 @@
 				210B335C29A961F70044079F /* AppDelegate.swift in Sources */,
 				210B335E29A961F70044079F /* SceneDelegate.swift in Sources */,
 				21D89CCA29AE059F0026D8FC /* LeftFirstBubbleTableViewCell.swift in Sources */,
+				21D89CD129AE17ED0026D8FC /* ShowKeyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

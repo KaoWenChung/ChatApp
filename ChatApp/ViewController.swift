@@ -7,7 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: PushKeyboardViewController {
+    
+    @IBAction func didTapView(_ sender: Any) {
+        view.endEditing(true)
+    }
+
     @IBOutlet weak private var messageTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
