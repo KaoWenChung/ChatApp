@@ -29,6 +29,9 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="paperplane.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="didTapSendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0xv-rz-Zx1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
@@ -68,6 +71,7 @@
                     <navigationItem key="navigationItem" id="RBe-Bs-VOf"/>
                     <connections>
                         <outlet property="messageTableView" destination="D65-Ps-uij" id="QgV-BV-PH0"/>
+                        <outlet property="messageTextField" destination="BVK-5O-RX6" id="BsI-PR-mIn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
