@@ -26,7 +26,7 @@ class PushKeyboardViewController: UIViewController {
     @objc func keyboardWillHide(notification: NSNotification) {
         // Reset the position of your view to its original state
         guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
-        guard view.frame.size.height != UIScreen.main.bounds.height else { return }
+        guard view.frame.size.height == UIScreen.main.bounds.height - keyboardSize.height else { return }
         view.frame.size.height += keyboardSize.height
     }
 

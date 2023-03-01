@@ -8,22 +8,11 @@
 import UIKit
 
 class ViewController: PushKeyboardViewController {
-
     @IBOutlet weak var messageTextField: UITextField!
+    @IBOutlet weak private var messageTableView: UITableView!
+
     private let viewModel = MessageViewModel()
     
-    @IBAction func didTapView(_ sender: Any) {
-        view.endEditing(true)
-    }
-
-    @IBAction func didTapSendButton(_ sender: UIButton) {
-        guard let content = messageTextField.text else { return }
-        viewModel.appendMessage(content)
-        messageTextField.text = nil
-        messageTableView.reloadData()
-    }
-    
-    @IBOutlet weak private var messageTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Message"
@@ -35,6 +24,17 @@ class ViewController: PushKeyboardViewController {
                                           RightOthersBubbleTableViewCell.self,
                                           LeftFirstBubbleTableViewCell.self,
                                           LeftOthersBubbleTableViewCell.self])
+    }
+
+    @IBAction private func didTapView(_ sender: Any) {
+        view.endEditing(true)
+    }
+
+    @IBAction private func didTapSendButton(_ sender: UIButton) {
+        guard let content = messageTextField.text, !content.isEmpty else { return }
+        viewModel.appendMessage(content)
+        messageTextField.text = nil
+        messageTableView.reloadData()
     }
 }
 
