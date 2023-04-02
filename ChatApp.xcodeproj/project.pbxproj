@@ -7,21 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21606B8729D474B6004420E8 /* ChatAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21606B8629D474B6004420E8 /* ChatAppApp.swift */; };
+		21606B8729D474B6004420E8 /* ChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21606B8629D474B6004420E8 /* ChatApp.swift */; };
 		21606B8929D474B6004420E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21606B8829D474B6004420E8 /* ContentView.swift */; };
 		21606B8B29D474B8004420E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21606B8A29D474B8004420E8 /* Assets.xcassets */; };
 		21606B8E29D474B8004420E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21606B8D29D474B8004420E8 /* Preview Assets.xcassets */; };
-		21606B9B29D8EC96004420E8 /* ChatAppConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21606B9A29D8EC96004420E8 /* ChatAppConfigure.swift */; };
 		21606B9E29D8ED3B004420E8 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21606B9D29D8ED3B004420E8 /* Realm */; };
+		21C03AF229DA1AEA00C0153C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21C03AF129DA1AEA00C0153C /* RealmSwift */; };
+		21C03AF529DA1BDF00C0153C /* AppStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C03AF429DA1BDF00C0153C /* AppStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		21606B8329D474B6004420E8 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		21606B8629D474B6004420E8 /* ChatAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppApp.swift; sourceTree = "<group>"; };
+		21606B8629D474B6004420E8 /* ChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatApp.swift; sourceTree = "<group>"; };
 		21606B8829D474B6004420E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		21606B8A29D474B8004420E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21606B8D29D474B8004420E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		21606B9A29D8EC96004420E8 /* ChatAppConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppConfigure.swift; sourceTree = "<group>"; };
+		21C03AF429DA1BDF00C0153C /* AppStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C03AF229DA1AEA00C0153C /* RealmSwift in Frameworks */,
 				21606B9E29D8ED3B004420E8 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,6 +43,7 @@
 			children = (
 				21606B8529D474B6004420E8 /* ChatApp */,
 				21606B8429D474B6004420E8 /* Products */,
+				21C03AF029DA1AEA00C0153C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,8 +58,8 @@
 		21606B8529D474B6004420E8 /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
-				21606B9A29D8EC96004420E8 /* ChatAppConfigure.swift */,
-				21606B8629D474B6004420E8 /* ChatAppApp.swift */,
+				21606B8629D474B6004420E8 /* ChatApp.swift */,
+				21C03AF429DA1BDF00C0153C /* AppStatus.swift */,
 				21606B8829D474B6004420E8 /* ContentView.swift */,
 				21606B8A29D474B8004420E8 /* Assets.xcassets */,
 				21606B8C29D474B8004420E8 /* Preview Content */,
@@ -72,6 +75,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		21C03AF029DA1AEA00C0153C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,6 +92,7 @@
 				21606B7F29D474B6004420E8 /* Sources */,
 				21606B8029D474B6004420E8 /* Frameworks */,
 				21606B8129D474B6004420E8 /* Resources */,
+				21C03AF329DA1B8600C0153C /* Swift Lint */,
 			);
 			buildRules = (
 			);
@@ -90,6 +101,7 @@
 			name = ChatApp;
 			packageProductDependencies = (
 				21606B9D29D8ED3B004420E8 /* Realm */,
+				21C03AF129DA1AEA00C0153C /* RealmSwift */,
 			);
 			productName = ChatApp;
 			productReference = 21606B8329D474B6004420E8 /* ChatApp.app */;
@@ -143,14 +155,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21C03AF329DA1B8600C0153C /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		21606B7F29D474B6004420E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C03AF529DA1BDF00C0153C /* AppStatus.swift in Sources */,
 				21606B8929D474B6004420E8 /* ContentView.swift in Sources */,
-				21606B9B29D8EC96004420E8 /* ChatAppConfigure.swift in Sources */,
-				21606B8729D474B6004420E8 /* ChatAppApp.swift in Sources */,
+				21606B8729D474B6004420E8 /* ChatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +400,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 21606B9C29D8ED3B004420E8 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = Realm;
+		};
+		21C03AF129DA1AEA00C0153C /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21606B9C29D8ED3B004420E8 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
