@@ -24,4 +24,12 @@ final class AppState: ObservableObject {
             }
         }
     }
+
+    var loggedIn: Bool {
+        app.currentUser != nil && app.currentUser?.state == .loggedIn
+    }
+
+    init() {
+        app.currentUser?.logOut {_ in}
+    }
 }

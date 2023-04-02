@@ -13,6 +13,7 @@ struct ChatApp: SwiftUI.App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(state)
         }
     }
 }
