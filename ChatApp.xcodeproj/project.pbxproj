@@ -16,6 +16,7 @@
 		21C03AF529DA1BDF00C0153C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C03AF429DA1BDF00C0153C /* AppState.swift */; };
 		21C03AF829DA2D0100C0153C /* LoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C03AF729DA2D0100C0153C /* LoggedInView.swift */; };
 		21C03AFB29DA2E4400C0153C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C03AFA29DA2E4400C0153C /* User.swift */; };
+		21C03AFE29DB07C600C0153C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C03AFD29DB07C600C0153C /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		21C03AF429DA1BDF00C0153C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		21C03AF729DA2D0100C0153C /* LoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
 		21C03AFA29DA2E4400C0153C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		21C03AFD29DB07C600C0153C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			children = (
 				21606B8829D474B6004420E8 /* ContentView.swift */,
 				21C03AF729DA2D0100C0153C /* LoggedInView.swift */,
+				21C03AFC29DB07B500C0153C /* Account */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -102,6 +105,14 @@
 				21C03AFA29DA2E4400C0153C /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		21C03AFC29DB07B500C0153C /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				21C03AFD29DB07C600C0153C /* LoginView.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C03AFE29DB07C600C0153C /* LoginView.swift in Sources */,
 				21C03AF529DA1BDF00C0153C /* AppState.swift in Sources */,
 				21C03AF829DA2D0100C0153C /* LoggedInView.swift in Sources */,
 				21606B8929D474B6004420E8 /* ContentView.swift in Sources */,
