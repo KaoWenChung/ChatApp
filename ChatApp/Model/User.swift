@@ -12,7 +12,9 @@ class User: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var id = UUID().uuidString
     @Persisted var partition = "" // "user=_id"
     @Persisted var userName = ""
+    @Persisted var userPreference: UserPreference?
     @Persisted var lastSeenAt: Date?
+    @Persisted var conversations = List<Conversation>()
     @Persisted var presence = "On-Line"
 
     var presenceState: Presence {

@@ -20,6 +20,8 @@ struct LoggedInView: View {
         if let user = users.first {
             if showingProfileView {
                 
+            } else {
+                
             }
         }
     }
