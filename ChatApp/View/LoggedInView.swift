@@ -14,8 +14,14 @@ struct LoggedInView: View {
     @ObservedResults(User.self) var users
     @Binding var userID: String?
 
+    @State var showingProfileView = false
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        if let user = users.first {
+            if showingProfileView {
+                
+            }
+        }
     }
 }
 

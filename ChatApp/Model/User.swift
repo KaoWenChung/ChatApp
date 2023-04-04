@@ -15,11 +15,26 @@ class User: Object, ObjectKeyIdentifiable {
     @Persisted var lastSeenAt: Date?
     @Persisted var presence = "On-Line"
 
+    var presenceState: Presence {
+        get { return Presence(rawValue: presence) ?? .hidden }
+        set { presence = newValue.asString }
+    }
+
     convenience init(userName: String, id: String) {
         self.init()
         self.userName = userName
         self.id = id
         partition = "user=\(id)"
         presence = "On-Line"
+    }
+}
+
+enum Presence: String {
+    case onLine = "On-Line"
+    case offLine = "Off-Line"
+    case hidden = "Hidden"
+
+    var asString: String {
+        self.rawValue
     }
 }

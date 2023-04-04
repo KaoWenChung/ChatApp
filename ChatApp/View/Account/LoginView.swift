@@ -26,6 +26,7 @@ struct LoginView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 10) {
+                Spacer()
                 TextField("username", text: $email)
                     .focused($focussedField, equals: .username)
                     .submitLabel(.next)
