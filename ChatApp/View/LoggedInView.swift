@@ -17,13 +17,16 @@ struct LoggedInView: View {
     @State var showingProfileView = false
 
     var body: some View {
-        if let user = users.first {
-            if showingProfileView {
-                
-            } else {
-                
+        ZStack {
+            if let user = users.first {
+                if showingProfileView {
+                    
+                } else {
+                    
+                }
             }
         }
+        .navigationBarTitle("Charts", displayMode: .inline)
     }
 }
 

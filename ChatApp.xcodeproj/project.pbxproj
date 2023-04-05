@@ -20,6 +20,11 @@
 		21931DE629DCACE30013E421 /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21931DE529DCACE30013E421 /* UserPreference.swift */; };
 		21931DE829DCAD6D0013E421 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21931DE729DCAD6D0013E421 /* Photo.swift */; };
 		21931DEB29DCAEFD0013E421 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21931DEA29DCAEFD0013E421 /* SampleData.swift */; };
+		21931DED29DD70FF0013E421 /* SetUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21931DEC29DD70FF0013E421 /* SetUserProfileView.swift */; };
+		21931DF029DD74D20013E421 /* AvatarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21931DEF29DD74D20013E421 /* AvatarButton.swift */; };
+		21931DF229DD774B0013E421 /* AvatarThumbNailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21931DF129DD774B0013E421 /* AvatarThumbNailView.swift */; };
+		21931DF429DD77BE0013E421 /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21931DF329DD77BE0013E421 /* ThumbnailView.swift */; };
+		21931DF629DD78C80013E421 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21931DF529DD78C80013E421 /* Thumbnail.swift */; };
 		21C03AF229DA1AEA00C0153C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21C03AF129DA1AEA00C0153C /* RealmSwift */; };
 		21C03AF529DA1BDF00C0153C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C03AF429DA1BDF00C0153C /* AppState.swift */; };
 		21C03AF829DA2D0100C0153C /* LoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C03AF729DA2D0100C0153C /* LoggedInView.swift */; };
@@ -42,6 +47,11 @@
 		21931DE529DCACE30013E421 /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
 		21931DE729DCAD6D0013E421 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		21931DEA29DCAEFD0013E421 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		21931DEC29DD70FF0013E421 /* SetUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUserProfileView.swift; sourceTree = "<group>"; };
+		21931DEF29DD74D20013E421 /* AvatarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarButton.swift; sourceTree = "<group>"; };
+		21931DF129DD774B0013E421 /* AvatarThumbNailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarThumbNailView.swift; sourceTree = "<group>"; };
+		21931DF329DD77BE0013E421 /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
+		21931DF529DD78C80013E421 /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
 		21C03AF429DA1BDF00C0153C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		21C03AF729DA2D0100C0153C /* LoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
 		21C03AFA29DA2E4400C0153C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -85,10 +95,10 @@
 				21606B8629D474B6004420E8 /* ChatApp.swift */,
 				21C03AF429DA1BDF00C0153C /* AppState.swift */,
 				21931DE929DCAEE90013E421 /* CustomPreview */,
-				21606B8A29D474B8004420E8 /* Assets.xcassets */,
 				21C03AF629DA1DCD00C0153C /* View */,
 				21C03AF929DA2E3300C0153C /* Model */,
 				21606B8C29D474B8004420E8 /* Preview Content */,
+				21606B8A29D474B8004420E8 /* Assets.xcassets */,
 			);
 			path = ChatApp;
 			sourceTree = "<group>";
@@ -115,6 +125,17 @@
 				21931DEA29DCAEFD0013E421 /* SampleData.swift */,
 			);
 			path = CustomPreview;
+			sourceTree = "<group>";
+		};
+		21931DEE29DD74C10013E421 /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				21931DEF29DD74D20013E421 /* AvatarButton.swift */,
+				21931DF129DD774B0013E421 /* AvatarThumbNailView.swift */,
+				21931DF329DD77BE0013E421 /* ThumbnailView.swift */,
+				21931DF529DD78C80013E421 /* Thumbnail.swift */,
+			);
+			path = Pictures;
 			sourceTree = "<group>";
 		};
 		21C03AF029DA1AEA00C0153C /* Frameworks */ = {
@@ -153,6 +174,7 @@
 			children = (
 				21C03AFD29DB07C600C0153C /* LoginView.swift */,
 				21931DDC29DC7AC90013E421 /* LogoutButton.swift */,
+				21931DEC29DD70FF0013E421 /* SetUserProfileView.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -160,6 +182,7 @@
 		21C03AFF29DB2E4B00C0153C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				21931DEE29DD74C10013E421 /* Pictures */,
 				21C03B0029DB2E6000C0153C /* OpaqueProgressView.swift */,
 				21931DDA29DC775F0013E421 /* CaptionLabel.swift */,
 			);
@@ -270,16 +293,21 @@
 				21C03AFE29DB07C600C0153C /* LoginView.swift in Sources */,
 				21C03AF529DA1BDF00C0153C /* AppState.swift in Sources */,
 				21C03AF829DA2D0100C0153C /* LoggedInView.swift in Sources */,
+				21931DF229DD774B0013E421 /* AvatarThumbNailView.swift in Sources */,
 				21931DDB29DC775F0013E421 /* CaptionLabel.swift in Sources */,
+				21931DF629DD78C80013E421 /* Thumbnail.swift in Sources */,
 				21606B8929D474B6004420E8 /* ContentView.swift in Sources */,
+				21931DF429DD77BE0013E421 /* ThumbnailView.swift in Sources */,
 				21931DE229DCAA0C0013E421 /* Conversation.swift in Sources */,
 				21931DE029DC8ED80013E421 /* ConversationListView.swift in Sources */,
 				21931DE429DCAA890013E421 /* Member.swift in Sources */,
 				21C03B0129DB2E6000C0153C /* OpaqueProgressView.swift in Sources */,
+				21931DED29DD70FF0013E421 /* SetUserProfileView.swift in Sources */,
 				21C03AFB29DA2E4400C0153C /* User.swift in Sources */,
 				21931DDD29DC7AC90013E421 /* LogoutButton.swift in Sources */,
 				21931DE629DCACE30013E421 /* UserPreference.swift in Sources */,
 				21931DEB29DCAEFD0013E421 /* SampleData.swift in Sources */,
+				21931DF029DD74D20013E421 /* AvatarButton.swift in Sources */,
 				21606B8729D474B6004420E8 /* ChatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
