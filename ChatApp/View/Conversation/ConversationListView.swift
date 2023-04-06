@@ -28,19 +28,18 @@ struct ConversationListView: View {
             VStack {
                 if let conversations = user.conversations.sorted(by: sortDescriptors) {
                     List {
-//                        ForEach(conversations) { conversation in
-//                            Button(action: {
-//                                self.conversation = conversation
-//                                showConversation.toggle()
-//                            }) {
-//                                ConversationCardView
-//                            }
-//                        }
+                        ForEach(conversations) { conversation in
+                            Button(action: {
+                                self.conversation = conversation
+                                showConversation.toggle()
+                            }) {
+//                                ConversationCardView(
+                            }
+                        }
                     }
                 }
             }
         }
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
