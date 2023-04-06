@@ -35,6 +35,26 @@ extension Member: Samplable {
     static var sample3: Member { Member(userName: "Tin", state: .pending) }
 }
 
+// MARK: - Chatster
+extension Chatster {
+    convenience init(user: User) {
+        self.init()
+        id = user.id
+        userName = user.userName
+        displayName = user.userPreference!.displayName
+        avatarImage = Photo(user.userPreference?.avatarImage)
+        lastSeenAt = Date.random
+        presence = user.presence
+    }
+}
+
+extension Chatster: Samplable {
+    static var samples: [Chatster] { [.sample, .sample2, .sample3] }
+    static var sample: Chatster { Chatster(user: .sample) }
+    static var sample2: Chatster { Chatster(user: .sample2) }
+    static var sample3: Chatster { Chatster(user: .sample3) }
+}
+
 // MARK: - Conversation
 extension Conversation {
     convenience init(displayName: String, unreadCount: Int, members: [Member]) {
@@ -74,6 +94,15 @@ extension Photo {
         thumbNail = (UIImage(named: photoName) ?? UIImage()).jpegData(compressionQuality: 0.8)
         picture = (UIImage(named: photoName) ?? UIImage()).jpegData(compressionQuality: 0.8)
         self.date = Date.random
+    }
+
+    convenience init(_ photo: Photo?) {
+        self.init()
+        if let photo {
+            thumbNail = photo.thumbNail
+            picture = photo.picture
+            date = photo.date
+        }
     }
 }
 
