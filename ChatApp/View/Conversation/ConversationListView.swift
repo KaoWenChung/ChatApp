@@ -32,13 +32,31 @@ struct ConversationListView: View {
                             Button(action: {
                                 self.conversation = conversation
                                 showConversation.toggle()
-                            }) {
-//                                ConversationCardView(
-                            }
+                            }, label: {
+                                ConversationCardView(conversation: conversation, isPreview: isPreview)
+                            })
                         }
                     }
+                    Button(action: { showingAddChat.toggle() },
+                           label: {
+                        Text("New Chat Room")
+                    })
+                    .disabled(showingAddChat)
+                }
+                Spacer()
+                if isPreview {
+                    // TODO: ChatRoomView
+//                    NavigationLink(destination: )
+                } else {
+                    // TODO: ChatRoomView
                 }
             }
+        }
+        .onAppear {
+            $user.presenceState.wrappedValue = .onLine
+        }
+        .sheet(isPresented: $showingAddChat) {
+            // TODO: NewConversationView
         }
     }
 }
@@ -46,5 +64,6 @@ struct ConversationListView: View {
 struct ConversationListView_Previews: PreviewProvider {
     static var previews: some View {
         ConversationListView(user: .sample)
+        
     }
 }
