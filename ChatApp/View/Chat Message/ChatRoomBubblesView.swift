@@ -25,7 +25,13 @@ struct ChatRoomBubblesView: View {
     var body: some View {
         VStack {
             ScrollView(.vertical) {
-//                ScrollViewReader { (proxy: ScrollViewProxy)}
+//                ScrollViewReader { (proxy: ScrollViewProxy) in
+//                    VStack {
+//                        ForEach(chats) { chatMessage in
+//                            ChatBubble
+//                        }
+//                    }
+//                }
             }
         }
         
