@@ -111,6 +111,7 @@ extension Photo: Samplable {
     static var sample: Photo { Photo(photoName: "Tim") }
     static var sample2: Photo { Photo(photoName: "Tom") }
     static var sample3: Photo { Photo(photoName: "Tin") }
+    static var spud: Photo { Photo(photoName: "spud\(Int.random(in: 1...8))")}
 }
 
 // MARK: - User
@@ -145,4 +146,31 @@ extension User: Samplable {
                                     presence: .hidden,
                                     userPreference: .sample,
                                     conversations: [.sample, .sample3])}
+}
+
+// MARK: - ChatMessage
+extension ChatMessage {
+    convenience init(conversation: Conversation,
+                     author: User,
+                     text: String = "This is the text for the message",
+                     includePhoto: Bool = false,
+                     includeLocation: Bool = false) {
+        self.init()
+        partition = "conversation=\(conversation.id)"
+        self.author = author.userName
+        self.text = text
+        if includePhoto { self.image = Photo.spud }
+        self.timestamp = Date.random
+        if includeLocation {
+            self.location.append(-0.187236861712 + Double.random(in: -10..<10))
+            self.location.append(50.298349187291 + Double.random(in: -10..<10))
+        }
+    }
+}
+
+extension ChatMessage: Samplable {
+    static var samples: [ChatMessage] { [.sample, .sample2, .sample3] }
+    static var sample: ChatMessage { ChatMessage(conversation: .sample, author: .sample)}
+    static var sample2: ChatMessage { ChatMessage(conversation: .sample2, author: .sample2, includePhoto: true)}
+    static var sample3: ChatMessage { ChatMessage(conversation: .sample3, author: .sample3, includeLocation: true)}
 }

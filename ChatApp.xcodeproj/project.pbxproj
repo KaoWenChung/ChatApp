@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2145FD4F29E3794D00B84E5C /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145FD4E29E3794D00B84E5C /* ChatBubbleView.swift */; };
+		2145FD5129E4A63A00B84E5C /* AuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145FD5029E4A63A00B84E5C /* AuthorView.swift */; };
 		21606B8729D474B6004420E8 /* ChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21606B8629D474B6004420E8 /* ChatApp.swift */; };
 		21606B8929D474B6004420E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21606B8829D474B6004420E8 /* ContentView.swift */; };
 		21606B8B29D474B8004420E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21606B8A29D474B8004420E8 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		2145FD4E29E3794D00B84E5C /* ChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
+		2145FD5029E4A63A00B84E5C /* AuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorView.swift; sourceTree = "<group>"; };
 		21606B8329D474B6004420E8 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21606B8629D474B6004420E8 /* ChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatApp.swift; sourceTree = "<group>"; };
 		21606B8829D474B6004420E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			children = (
 				21EB2CC829DF4284006C6286 /* ChatRoomBubblesView.swift */,
 				2145FD4E29E3794D00B84E5C /* ChatBubbleView.swift */,
+				2145FD5029E4A63A00B84E5C /* AuthorView.swift */,
 			);
 			path = "Chat Message";
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				21931DDD29DC7AC90013E421 /* LogoutButton.swift in Sources */,
 				21931DE629DCACE30013E421 /* UserPreference.swift in Sources */,
 				21931DEB29DCAEFD0013E421 /* SampleData.swift in Sources */,
+				2145FD5129E4A63A00B84E5C /* AuthorView.swift in Sources */,
 				21931DFB29DDA3A90013E421 /* ConversationCardContentsView.swift in Sources */,
 				21EB2CBE29DF249F006C6286 /* UserAvatarView.swift in Sources */,
 				21EB2CC929DF4284006C6286 /* ChatRoomBubblesView.swift in Sources */,

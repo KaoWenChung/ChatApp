@@ -12,13 +12,41 @@ struct ChatBubbleView: View {
     let chatMessage: ChatMessage
     let authorName: String?
     var isPreview = false
+
+    var isMyMessage: Bool { authorName == nil }
+    private enum Dimensions {
+        static let padding: CGFloat = 4
+        static let horizontalOffset: CGFloat = 100
+        static let cornerRadius: CGFloat = 15
+    }
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            if isMyMessage { Spacer().frame(width: Dimensions.horizontalOffset) }
+            VStack {
+                if let authorName {
+                    if isPreview {
+                        AuthorView(userName: authorName)
+                    } else {
+                        AuthorView(userName: authorName)
+                            .environment(\.realmConfiguration,
+                                          app.currentUser!.configuration(partitionValue: "all-users=all-the-users"))
+                    }
+                }
+                Spacer()
+            }
+        }
     }
 }
 
-//struct ChatBubbleView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ChatBubbleView(chatMessage: .sample, authorName: <#T##String?#>)
-//    }
-//}
+struct ChatBubbleView_Previews: PreviewProvider {
+    static var previews: some View {
+        return Group {
+            ChatBubbleView(chatMessage: .sample, authorName: "Tim", isPreview: true)
+            ChatBubbleView(chatMessage: .sample2, authorName: "Tom", isPreview: true)
+            ChatBubbleView(chatMessage: .sample, authorName: nil, isPreview: true)
+        }
+        .padding()
+        .previewLayout(.sizeThatFits)
+    }
+}
