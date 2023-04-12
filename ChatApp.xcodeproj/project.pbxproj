@@ -10,6 +10,10 @@
 		2145FD4F29E3794D00B84E5C /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145FD4E29E3794D00B84E5C /* ChatBubbleView.swift */; };
 		2145FD5129E4A63A00B84E5C /* AuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145FD5029E4A63A00B84E5C /* AuthorView.swift */; };
 		2145FD5329E4A8B600B84E5C /* TextDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145FD5229E4A8B600B84E5C /* TextDate.swift */; };
+		2156CDB129E6F701006A24BE /* ChatInputBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDB029E6F701006A24BE /* ChatInputBox.swift */; };
+		2156CDB329E6FD29006A24BE /* ThumbnailWithDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDB229E6FD29006A24BE /* ThumbnailWithDelete.swift */; };
+		2156CDB629E7341F006A24BE /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDB529E7341F006A24BE /* DeleteButton.swift */; };
+		2156CDB829E734CC006A24BE /* ButtonTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDB729E734CC006A24BE /* ButtonTemplate.swift */; };
 		21606B8729D474B6004420E8 /* ChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21606B8629D474B6004420E8 /* ChatApp.swift */; };
 		21606B8929D474B6004420E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21606B8829D474B6004420E8 /* ContentView.swift */; };
 		21606B8B29D474B8004420E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21606B8A29D474B8004420E8 /* Assets.xcassets */; };
@@ -51,6 +55,10 @@
 		2145FD4E29E3794D00B84E5C /* ChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
 		2145FD5029E4A63A00B84E5C /* AuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorView.swift; sourceTree = "<group>"; };
 		2145FD5229E4A8B600B84E5C /* TextDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDate.swift; sourceTree = "<group>"; };
+		2156CDB029E6F701006A24BE /* ChatInputBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputBox.swift; sourceTree = "<group>"; };
+		2156CDB229E6FD29006A24BE /* ThumbnailWithDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailWithDelete.swift; sourceTree = "<group>"; };
+		2156CDB529E7341F006A24BE /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
+		2156CDB729E734CC006A24BE /* ButtonTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTemplate.swift; sourceTree = "<group>"; };
 		21606B8329D474B6004420E8 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21606B8629D474B6004420E8 /* ChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatApp.swift; sourceTree = "<group>"; };
 		21606B8829D474B6004420E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2156CDB429E73402006A24BE /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				2156CDB529E7341F006A24BE /* DeleteButton.swift */,
+				2156CDB729E734CC006A24BE /* ButtonTemplate.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		21606B7A29D474B6004420E8 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				21931DEF29DD74D20013E421 /* AvatarButton.swift */,
+				2156CDB229E6FD29006A24BE /* ThumbnailWithDelete.swift */,
 				21931DF129DD774B0013E421 /* AvatarThumbNailView.swift */,
 				21931DF329DD77BE0013E421 /* ThumbnailView.swift */,
 				21931DF529DD78C80013E421 /* Thumbnail.swift */,
@@ -221,6 +239,7 @@
 		21C03AFF29DB2E4B00C0153C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2156CDB429E73402006A24BE /* Buttons */,
 				21931DEE29DD74C10013E421 /* Pictures */,
 				21C03B0029DB2E6000C0153C /* OpaqueProgressView.swift */,
 				21931DDA29DC775F0013E421 /* CaptionLabel.swift */,
@@ -233,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				21EB2CC829DF4284006C6286 /* ChatRoomBubblesView.swift */,
+				2156CDB029E6F701006A24BE /* ChatInputBox.swift */,
 				2145FD4E29E3794D00B84E5C /* ChatBubbleView.swift */,
 				2145FD5029E4A63A00B84E5C /* AuthorView.swift */,
 			);
@@ -350,6 +370,7 @@
 				21931DF229DD774B0013E421 /* AvatarThumbNailView.swift in Sources */,
 				21931DDB29DC775F0013E421 /* CaptionLabel.swift in Sources */,
 				21EB2CBC29DF23D1006C6286 /* MugShotGridView.swift in Sources */,
+				2156CDB329E6FD29006A24BE /* ThumbnailWithDelete.swift in Sources */,
 				21931DF629DD78C80013E421 /* Thumbnail.swift in Sources */,
 				21606B8929D474B6004420E8 /* ContentView.swift in Sources */,
 				21931DF429DD77BE0013E421 /* ThumbnailView.swift in Sources */,
@@ -361,8 +382,10 @@
 				21EB2CC629DF412E006C6286 /* ChatRoomView.swift in Sources */,
 				21C03B0129DB2E6000C0153C /* OpaqueProgressView.swift in Sources */,
 				21931DED29DD70FF0013E421 /* SetUserProfileView.swift in Sources */,
+				2156CDB829E734CC006A24BE /* ButtonTemplate.swift in Sources */,
 				2145FD5329E4A8B600B84E5C /* TextDate.swift in Sources */,
 				21C03AFB29DA2E4400C0153C /* User.swift in Sources */,
+				2156CDB129E6F701006A24BE /* ChatInputBox.swift in Sources */,
 				2145FD4F29E3794D00B84E5C /* ChatBubbleView.swift in Sources */,
 				21931DDD29DC7AC90013E421 /* LogoutButton.swift in Sources */,
 				21931DE629DCACE30013E421 /* UserPreference.swift in Sources */,
@@ -372,6 +395,7 @@
 				21EB2CBE29DF249F006C6286 /* UserAvatarView.swift in Sources */,
 				21EB2CC929DF4284006C6286 /* ChatRoomBubblesView.swift in Sources */,
 				21931DF029DD74D20013E421 /* AvatarButton.swift in Sources */,
+				2156CDB629E7341F006A24BE /* DeleteButton.swift in Sources */,
 				21606B8729D474B6004420E8 /* ChatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

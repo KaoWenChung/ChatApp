@@ -25,17 +25,35 @@ struct ChatRoomBubblesView: View {
     var body: some View {
         VStack {
             ScrollView(.vertical) {
-//                ScrollViewReader { (proxy: ScrollViewProxy) in
-//                    VStack {
-//                        ForEach(chats) { chatMessage in
-//                            ChatBubble
-//                        }
-//                    }
-//                }
+                ScrollViewReader { (proxy: ScrollViewProxy) in
+                    VStack {
+                        ForEach(chats) { chatMessage in
+                            ChatBubbleView(chatMessage: chatMessage,
+                                           authorName: chatMessage.author != user.userName ? chatMessage.author : nil,
+                                           isPreview: isPreview)
+                        }
+                    }
+                    .onAppear {
+                        scrollToBottom()
+                        withAnimation(.linear(duration: 0.2)) {
+                            proxy.scrollTo(latestChatID, anchor: .bottom)
+                        }
+                    }
+                    .onChange(of: latestChatID) { target in
+                        withAnimation {
+                            proxy.scrollTo(target, anchor: .bottom)
+                        }
+                    }
+                }
+            }
+            Spacer()
+            if isPreview {
+                
             }
         }
-        
     }
+
+    private func scrollToBottom() {}
 }
 
 struct ChatRoomBubblesView_Previews: PreviewProvider {
