@@ -34,9 +34,31 @@ struct ChatInputBox: View {
     var body: some View {
         VStack {
             if let photo {
-                
+                ThumbnailWithDelete(photo: photo, action: deletePhoto)
             }
+            if location.count == 2 {
+                MapThumbnailWithDelete(location: location, action: deleteMap)
+            }
+            TextEditor(text: $chatText)
+                .onTapGesture(perform: focusAction)
+                .focused($isTextFocused)
+                .padding(Dimensions.padding)
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: Dimensions.minHeight, maxHeight: Dimensions.maxHeight)
+                .background(Color("GreenBackground"))
+                .clipShape(RoundedRectangle(cornerRadius: Dimensions.radius))
         }
+        HStack {
+            Spacer()
+            // TODO: Buttons
+        }
+    }
+
+    private func deletePhoto() {
+        photo = nil
+    }
+
+    private func deleteMap() {
+        location.removeAll()
     }
 }
 

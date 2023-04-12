@@ -14,6 +14,8 @@
 		2156CDB329E6FD29006A24BE /* ThumbnailWithDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDB229E6FD29006A24BE /* ThumbnailWithDelete.swift */; };
 		2156CDB629E7341F006A24BE /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDB529E7341F006A24BE /* DeleteButton.swift */; };
 		2156CDB829E734CC006A24BE /* ButtonTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDB729E734CC006A24BE /* ButtonTemplate.swift */; };
+		2156CDBB29E74988006A24BE /* MapThumbnailWithDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDBA29E74988006A24BE /* MapThumbnailWithDelete.swift */; };
+		2156CDBE29E74A84006A24BE /* MyAnnotationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDBD29E74A84006A24BE /* MyAnnotationItem.swift */; };
 		21606B8729D474B6004420E8 /* ChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21606B8629D474B6004420E8 /* ChatApp.swift */; };
 		21606B8929D474B6004420E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21606B8829D474B6004420E8 /* ContentView.swift */; };
 		21606B8B29D474B8004420E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21606B8A29D474B8004420E8 /* Assets.xcassets */; };
@@ -59,6 +61,8 @@
 		2156CDB229E6FD29006A24BE /* ThumbnailWithDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailWithDelete.swift; sourceTree = "<group>"; };
 		2156CDB529E7341F006A24BE /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		2156CDB729E734CC006A24BE /* ButtonTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTemplate.swift; sourceTree = "<group>"; };
+		2156CDBA29E74988006A24BE /* MapThumbnailWithDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapThumbnailWithDelete.swift; sourceTree = "<group>"; };
+		2156CDBD29E74A84006A24BE /* MyAnnotationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnnotationItem.swift; sourceTree = "<group>"; };
 		21606B8329D474B6004420E8 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21606B8629D474B6004420E8 /* ChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatApp.swift; sourceTree = "<group>"; };
 		21606B8829D474B6004420E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,6 +121,22 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		2156CDB929E74981006A24BE /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				2156CDBA29E74988006A24BE /* MapThumbnailWithDelete.swift */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
+		2156CDBC29E74A73006A24BE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2156CDBD29E74A84006A24BE /* MyAnnotationItem.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		21606B7A29D474B6004420E8 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +159,7 @@
 			children = (
 				21606B8629D474B6004420E8 /* ChatApp.swift */,
 				21C03AF429DA1BDF00C0153C /* AppState.swift */,
+				2156CDBC29E74A73006A24BE /* Helpers */,
 				21931DE929DCAEE90013E421 /* CustomPreview */,
 				21C03AF629DA1DCD00C0153C /* View */,
 				21C03AF929DA2E3300C0153C /* Model */,
@@ -239,6 +260,7 @@
 		21C03AFF29DB2E4B00C0153C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2156CDB929E74981006A24BE /* Maps */,
 				2156CDB429E73402006A24BE /* Buttons */,
 				21931DEE29DD74C10013E421 /* Pictures */,
 				21C03B0029DB2E6000C0153C /* OpaqueProgressView.swift */,
@@ -384,6 +406,7 @@
 				21931DED29DD70FF0013E421 /* SetUserProfileView.swift in Sources */,
 				2156CDB829E734CC006A24BE /* ButtonTemplate.swift in Sources */,
 				2145FD5329E4A8B600B84E5C /* TextDate.swift in Sources */,
+				2156CDBE29E74A84006A24BE /* MyAnnotationItem.swift in Sources */,
 				21C03AFB29DA2E4400C0153C /* User.swift in Sources */,
 				2156CDB129E6F701006A24BE /* ChatInputBox.swift in Sources */,
 				2145FD4F29E3794D00B84E5C /* ChatBubbleView.swift in Sources */,
@@ -391,6 +414,7 @@
 				21931DE629DCACE30013E421 /* UserPreference.swift in Sources */,
 				21931DEB29DCAEFD0013E421 /* SampleData.swift in Sources */,
 				2145FD5129E4A63A00B84E5C /* AuthorView.swift in Sources */,
+				2156CDBB29E74988006A24BE /* MapThumbnailWithDelete.swift in Sources */,
 				21931DFB29DDA3A90013E421 /* ConversationCardContentsView.swift in Sources */,
 				21EB2CBE29DF249F006C6286 /* UserAvatarView.swift in Sources */,
 				21EB2CC929DF4284006C6286 /* ChatRoomBubblesView.swift in Sources */,
