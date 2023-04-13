@@ -16,6 +16,10 @@
 		2156CDB829E734CC006A24BE /* ButtonTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDB729E734CC006A24BE /* ButtonTemplate.swift */; };
 		2156CDBB29E74988006A24BE /* MapThumbnailWithDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDBA29E74988006A24BE /* MapThumbnailWithDelete.swift */; };
 		2156CDBE29E74A84006A24BE /* MyAnnotationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDBD29E74A84006A24BE /* MyAnnotationItem.swift */; };
+		2156CDC029E84EBE006A24BE /* LocationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDBF29E84EBE006A24BE /* LocationButton.swift */; };
+		2156CDC229E84F42006A24BE /* AttachButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDC129E84F42006A24BE /* AttachButton.swift */; };
+		2156CDC429E84FA0006A24BE /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDC329E84FA0006A24BE /* CameraButton.swift */; };
+		2156CDC629E84FF0006A24BE /* SendButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDC529E84FF0006A24BE /* SendButton.swift */; };
 		21606B8729D474B6004420E8 /* ChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21606B8629D474B6004420E8 /* ChatApp.swift */; };
 		21606B8929D474B6004420E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21606B8829D474B6004420E8 /* ContentView.swift */; };
 		21606B8B29D474B8004420E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21606B8A29D474B8004420E8 /* Assets.xcassets */; };
@@ -63,6 +67,10 @@
 		2156CDB729E734CC006A24BE /* ButtonTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTemplate.swift; sourceTree = "<group>"; };
 		2156CDBA29E74988006A24BE /* MapThumbnailWithDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapThumbnailWithDelete.swift; sourceTree = "<group>"; };
 		2156CDBD29E74A84006A24BE /* MyAnnotationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnnotationItem.swift; sourceTree = "<group>"; };
+		2156CDBF29E84EBE006A24BE /* LocationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationButton.swift; sourceTree = "<group>"; };
+		2156CDC129E84F42006A24BE /* AttachButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachButton.swift; sourceTree = "<group>"; };
+		2156CDC329E84FA0006A24BE /* CameraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButton.swift; sourceTree = "<group>"; };
+		2156CDC529E84FF0006A24BE /* SendButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendButton.swift; sourceTree = "<group>"; };
 		21606B8329D474B6004420E8 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21606B8629D474B6004420E8 /* ChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatApp.swift; sourceTree = "<group>"; };
 		21606B8829D474B6004420E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +124,10 @@
 			isa = PBXGroup;
 			children = (
 				2156CDB529E7341F006A24BE /* DeleteButton.swift */,
+				2156CDBF29E84EBE006A24BE /* LocationButton.swift */,
+				2156CDC129E84F42006A24BE /* AttachButton.swift */,
+				2156CDC329E84FA0006A24BE /* CameraButton.swift */,
+				2156CDC529E84FF0006A24BE /* SendButton.swift */,
 				2156CDB729E734CC006A24BE /* ButtonTemplate.swift */,
 			);
 			path = Buttons;
@@ -383,6 +395,7 @@
 			files = (
 				21931DFD29DDA4050013E421 /* Chatster.swift in Sources */,
 				21931DE829DCAD6D0013E421 /* Photo.swift in Sources */,
+				2156CDC229E84F42006A24BE /* AttachButton.swift in Sources */,
 				21C03AFE29DB07C600C0153C /* LoginView.swift in Sources */,
 				21C03AF529DA1BDF00C0153C /* AppState.swift in Sources */,
 				21EB2CCB29DF72D6006C6286 /* ChatMessage.swift in Sources */,
@@ -396,6 +409,7 @@
 				21931DF629DD78C80013E421 /* Thumbnail.swift in Sources */,
 				21606B8929D474B6004420E8 /* ContentView.swift in Sources */,
 				21931DF429DD77BE0013E421 /* ThumbnailView.swift in Sources */,
+				2156CDC029E84EBE006A24BE /* LocationButton.swift in Sources */,
 				21931DE229DCAA0C0013E421 /* Conversation.swift in Sources */,
 				21931DE029DC8ED80013E421 /* ConversationListView.swift in Sources */,
 				21EB2CC029DF2591006C6286 /* ThumbnailPhotoView.swift in Sources */,
@@ -412,6 +426,7 @@
 				2145FD4F29E3794D00B84E5C /* ChatBubbleView.swift in Sources */,
 				21931DDD29DC7AC90013E421 /* LogoutButton.swift in Sources */,
 				21931DE629DCACE30013E421 /* UserPreference.swift in Sources */,
+				2156CDC629E84FF0006A24BE /* SendButton.swift in Sources */,
 				21931DEB29DCAEFD0013E421 /* SampleData.swift in Sources */,
 				2145FD5129E4A63A00B84E5C /* AuthorView.swift in Sources */,
 				2156CDBB29E74988006A24BE /* MapThumbnailWithDelete.swift in Sources */,
@@ -421,6 +436,7 @@
 				21931DF029DD74D20013E421 /* AvatarButton.swift in Sources */,
 				2156CDB629E7341F006A24BE /* DeleteButton.swift in Sources */,
 				21606B8729D474B6004420E8 /* ChatApp.swift in Sources */,
+				2156CDC429E84FA0006A24BE /* CameraButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -43,14 +43,67 @@ struct ChatInputBox: View {
                 .onTapGesture(perform: focusAction)
                 .focused($isTextFocused)
                 .padding(Dimensions.padding)
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: Dimensions.minHeight, maxHeight: Dimensions.maxHeight)
+                .frame(minWidth: 0,
+                       maxWidth: .infinity,
+                       minHeight: Dimensions.minHeight,
+                       maxHeight: Dimensions.maxHeight)
                 .background(Color("GreenBackground"))
                 .clipShape(RoundedRectangle(cornerRadius: Dimensions.radius))
+            HStack {
+                Spacer()
+                LocationButton(action: addLocation,
+                               active: shouldShareLocation && location.count == 0)
+                AttachButton(action: addAttachment,
+                             active: photo == nil)
+                CameraButton(action: takePhoto,
+                             active: photo == nil)
+                SendButton(action: sendChat,
+                           active: !isEmpty)
+            }
+            .frame(height: Dimensions.toolStripHeight)
         }
-        HStack {
-            Spacer()
-            // TODO: Buttons
+        .padding(Dimensions.padding)
+        .onAppear(perform: onAppear)
+    }
+
+    private func addLocation() {
+        let location = LocationHelper.currentLoaction
+        self.location = [location.longitude, location.latitude]
+    }
+
+    private func onAppear() {
+        clearBackground()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            isTextFocused = true
         }
+    }
+
+    private func clearBackground() {
+        UITextView.appearance().backgroundColor = .clear
+    }
+
+    private func addAttachment() {
+        // TODO: PhotoCaptureController
+    }
+
+    private func takePhoto() {
+        // TODO: PhotoCaptureController
+    }
+
+    private func sendChat() {
+        sendMessage(text: chatText, photo: photo, location: location)
+        photo = nil
+        chatText.removeAll()
+        location.removeAll()
+        isTextFocused = true
+    }
+
+    private func sendMessage(text: String, photo: Photo?, location: [Double]) {
+        let chatMessage = ChatMessage(author: user.userName,
+                                      text: text,
+                                      image: photo,
+                                      location: location)
+        send(chatMessage)
     }
 
     private func deletePhoto() {
@@ -62,8 +115,14 @@ struct ChatInputBox: View {
     }
 }
 
-//struct ChatInputBox_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ChatInputBox()
-//    }
-//}
+struct ChatInputBox_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            ChatInputBox(user: .sample)
+            ChatInputBox(user: .sample, photo: .sample, location: [])
+            ChatInputBox(user: .sample, photo: .sample, location: [-0.106, 51.506])
+        }
+        .previewLayout(.sizeThatFits)
+        .padding()
+    }
+}
