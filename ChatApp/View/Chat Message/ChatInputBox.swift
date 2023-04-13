@@ -83,11 +83,17 @@ struct ChatInputBox: View {
     }
 
     private func addAttachment() {
-        // TODO: PhotoCaptureController
+        PhotoCaptureController.show(source: .camera) { controller, photo in
+            self.photo = photo
+            controller.hide()
+        }
     }
 
     private func takePhoto() {
-        // TODO: PhotoCaptureController
+        PhotoCaptureController.show(source: .camera) { controller, photo in
+            self.photo = photo
+            controller.hide()
+        }
     }
 
     private func sendChat() {

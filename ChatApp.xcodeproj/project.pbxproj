@@ -20,6 +20,7 @@
 		2156CDC229E84F42006A24BE /* AttachButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDC129E84F42006A24BE /* AttachButton.swift */; };
 		2156CDC429E84FA0006A24BE /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDC329E84FA0006A24BE /* CameraButton.swift */; };
 		2156CDC629E84FF0006A24BE /* SendButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDC529E84FF0006A24BE /* SendButton.swift */; };
+		2156CDC829E85413006A24BE /* PhotoCaptureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156CDC729E85413006A24BE /* PhotoCaptureController.swift */; };
 		21606B8729D474B6004420E8 /* ChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21606B8629D474B6004420E8 /* ChatApp.swift */; };
 		21606B8929D474B6004420E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21606B8829D474B6004420E8 /* ContentView.swift */; };
 		21606B8B29D474B8004420E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21606B8A29D474B8004420E8 /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		2156CDC129E84F42006A24BE /* AttachButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachButton.swift; sourceTree = "<group>"; };
 		2156CDC329E84FA0006A24BE /* CameraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButton.swift; sourceTree = "<group>"; };
 		2156CDC529E84FF0006A24BE /* SendButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendButton.swift; sourceTree = "<group>"; };
+		2156CDC729E85413006A24BE /* PhotoCaptureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureController.swift; sourceTree = "<group>"; };
 		21606B8329D474B6004420E8 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21606B8629D474B6004420E8 /* ChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatApp.swift; sourceTree = "<group>"; };
 		21606B8829D474B6004420E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				2156CDBD29E74A84006A24BE /* MyAnnotationItem.swift */,
+				2156CDC729E85413006A24BE /* PhotoCaptureController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				2156CDB829E734CC006A24BE /* ButtonTemplate.swift in Sources */,
 				2145FD5329E4A8B600B84E5C /* TextDate.swift in Sources */,
 				2156CDBE29E74A84006A24BE /* MyAnnotationItem.swift in Sources */,
+				2156CDC829E85413006A24BE /* PhotoCaptureController.swift in Sources */,
 				21C03AFB29DA2E4400C0153C /* User.swift in Sources */,
 				2156CDB129E6F701006A24BE /* ChatInputBox.swift in Sources */,
 				2145FD4F29E3794D00B84E5C /* ChatBubbleView.swift in Sources */,
