@@ -32,11 +32,22 @@ struct SetUserProfileView: View {
                         Text("Add photo")
                     }
                 }
-                
+                InputField(title: "Display name", text: $displayName)
+                CallToActionButton(title: "Save User Profile", action: saveProfile)
+            }
+            Section(header: Text("Device Setting")) {
+                Toggle(isOn: $shouldShareLocation, label: {
+                    Text("Share Location")
+                })
+                .onChange(of: shouldShareLocation) {_ in}
             }
         }
     }
+
     private func showPhotoTaker() {
+        
+    }
+    private func saveProfile() {
         
     }
 }
