@@ -10,6 +10,7 @@ import RealmSwift
 
 struct SetUserProfileView: View {
     @AppStorage("shouldShareLocation") var shouldShareLocation = false
+
     @ObservedRealmObject var user: User
     @Binding var isPresented: Bool
     @Binding var userID: String?
@@ -17,7 +18,7 @@ struct SetUserProfileView: View {
     @State private var displayName = ""
     @State private var photo: Photo?
     @State private var photoAdded = false
-    // TODO: SetUserProfileView
+
     var body: some View {
         Form {
             Section(header: Text("User Profile")) {
@@ -31,6 +32,7 @@ struct SetUserProfileView: View {
                         Text("Add photo")
                     }
                 }
+                
             }
         }
     }
