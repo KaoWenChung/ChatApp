@@ -40,16 +40,22 @@ struct SetUserProfileView: View {
                     Text("Share Location")
                 })
                 .onChange(of: shouldShareLocation) {_ in}
+                // TODO: OnlineAlertSettings
             }
         }
+        .onAppear(perform: initData)
+        .navigationBarItems(
+            leading: Button(action: { isPresented = false }) { BackButton() },
+            trailing: LogoutButton(user: user, userID: $userID, action: { isPresented = false }))
+        .padding()
+        .navigationBarTitle("Edit Profile", displayMode: .inline)
     }
 
-    private func showPhotoTaker() {
-        
-    }
-    private func saveProfile() {
-        
-    }
+    private func initData() {}
+
+    private func showPhotoTaker() {}
+
+    private func saveProfile() {}
 }
 
 //struct SetUserProfileView_Previews: PreviewProvider {
