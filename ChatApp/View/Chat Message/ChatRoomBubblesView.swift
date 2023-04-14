@@ -48,18 +48,48 @@ struct ChatRoomBubblesView: View {
             }
             Spacer()
             if isPreview {
-                
+                ChatInputBox(user: user, send: sendMessage, focusAction: scrollToBottom)
+            } else {
+                ChatInputBox(user: user, send: sendMessage, focusAction: scrollToBottom)
+                    .environment(\.realmConfiguration,
+                                  app.currentUser!.configuration(partitionValue: "user=\(user.id)"))
             }
+        }
+        .navigationBarTitle(conversation?.displayName ?? "Chat", displayMode: .inline)
+        .padding(.horizontal, Dimensions.padding)
+        .onAppear { loadChatRoom() }
+        .onDisappear { closeChatRoom() }
+    }
+
+    private func scrollToBottom() {
+        latestChatID = chats.last?.id ?? ""
+    }
+
+    private func loadChatRoom() {
+        scrollToBottom()
+        realmChatsNotificationToken = chats.thaw()?.observe { _ in
+            scrollToBottom()
         }
     }
 
-    private func scrollToBottom() {}
+    private func closeChatRoom() {
+        if let token = realmChatsNotificationToken {
+            token.invalidate()
+        }
+    }
+
+    private func sendMessage(_ message: ChatMessage) {
+        guard let conversationString = conversation else {
+            return
+        }
+        message.conversationID = conversationString.id
+        $chats.append(message)
+    }
 }
 
 struct ChatRoomBubblesView_Previews: PreviewProvider {
     static var previews: some View {
         ChatRoomBubblesView(user: .sample, isPreview: true)
-        // TODO: Add environmentObject
+            .environmentObject(AppState.sample)
     }
 }
-

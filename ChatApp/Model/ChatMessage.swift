@@ -31,7 +31,7 @@ class ChatMessage: Object, ObjectKeyIdentifiable {
         }
     }
 
-    var conversation: String {
+    var conversationID: String {
         get { partition.components(separatedBy: "=")[1] }
         set(conversation) { partition = "conversation=\(conversation)" }
     }

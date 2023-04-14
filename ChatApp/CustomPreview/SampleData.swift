@@ -19,6 +19,14 @@ extension Date {
     }
 }
 
+// MARK: - AppState
+extension AppState: Samplable {
+    static var samples: [AppState] { [sample, sample2, sample3] }
+    static var sample: AppState { AppState() }
+    static var sample2: AppState { AppState() }
+    static var sample3: AppState { AppState() }
+}
+
 // MARK: - Mamber
 extension Member {
     convenience init(_ member: Member) {
