@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 protocol Samplable {
     associatedtype Item
@@ -86,6 +87,14 @@ extension UserPreference {
         self.displayName = displayName
         avatarImage = photo
     }
+
+    convenience init(_ userPreference: UserPreference?) {
+        self.init()
+        if let userPreference {
+            displayName = userPreference.displayName
+            avatarImage = Photo(userPreference.avatarImage)
+        }
+    }
 }
 
 extension UserPreference: Samplable {
@@ -138,6 +147,14 @@ extension User {
             self.conversations.append(conversation)
         }
     }
+
+    convenience init(_ user: User) {
+        self.init()
+        partition = user.partition
+        userName = user.userName
+        userPreference = UserPreference(user.userPreference)
+        
+    }
 }
 
 extension User: Samplable {
@@ -181,4 +198,38 @@ extension ChatMessage: Samplable {
     static var sample: ChatMessage { ChatMessage(conversation: .sample, author: .sample)}
     static var sample2: ChatMessage { ChatMessage(conversation: .sample2, author: .sample2, includePhoto: true)}
     static var sample3: ChatMessage { ChatMessage(conversation: .sample3, author: .sample3, includeLocation: true)}
+}
+
+extension Realm {
+    static var samples: [Realm?] { [sample] }
+    static var sample: Realm? {
+        let realm = try? Realm()
+        try? realm?.write {
+            realm?.deleteAll()
+            User.samples.forEach { user in
+                realm?.add(user)
+            }
+            Chatster.samples.forEach { chatster in
+                realm?.add(chatster)
+            }
+            ChatMessage.samples.forEach { chatMessage in
+                realm?.add(chatMessage)
+            }
+        }
+        return realm
+    }
+
+    static func bootstrap() {
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.deleteAll()
+                realm.add(Chatster.samples)
+                realm.add(User(User.sample))
+                realm.add(ChatMessage.samples)
+            }
+        } catch {
+            print()
+        }
+    }
 }
