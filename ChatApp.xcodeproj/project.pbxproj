@@ -46,6 +46,8 @@
 		21A463D129E9AC1C00502D7C /* CallToActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A463D029E9AC1C00502D7C /* CallToActionButton.swift */; };
 		21A463D329E9B0A600502D7C /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A463D229E9B0A600502D7C /* BackButton.swift */; };
 		21A463D529EA12B700502D7C /* OnlineAlertSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A463D429EA12B700502D7C /* OnlineAlertSettings.swift */; };
+		21A463D729EC1C5600502D7C /* NewConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A463D629EC1C5600502D7C /* NewConversationView.swift */; };
+		21A463D929EC1F5700502D7C /* SearchBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A463D829EC1F5700502D7C /* SearchBox.swift */; };
 		21C03AF229DA1AEA00C0153C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21C03AF129DA1AEA00C0153C /* RealmSwift */; };
 		21C03AF529DA1BDF00C0153C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C03AF429DA1BDF00C0153C /* AppState.swift */; };
 		21C03AF829DA2D0100C0153C /* LoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C03AF729DA2D0100C0153C /* LoggedInView.swift */; };
@@ -102,6 +104,8 @@
 		21A463D029E9AC1C00502D7C /* CallToActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallToActionButton.swift; sourceTree = "<group>"; };
 		21A463D229E9B0A600502D7C /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		21A463D429EA12B700502D7C /* OnlineAlertSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineAlertSettings.swift; sourceTree = "<group>"; };
+		21A463D629EC1C5600502D7C /* NewConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationView.swift; sourceTree = "<group>"; };
+		21A463D829EC1F5700502D7C /* SearchBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBox.swift; sourceTree = "<group>"; };
 		21C03AF429DA1BDF00C0153C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		21C03AF729DA2D0100C0153C /* LoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
 		21C03AFA29DA2E4400C0153C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -206,6 +210,7 @@
 				21EB2CC529DF412E006C6286 /* ChatRoomView.swift */,
 				21931DDF29DC8ED80013E421 /* ConversationListView.swift */,
 				21931DF829DDA34B0013E421 /* ConversationCardView.swift */,
+				21A463D629EC1C5600502D7C /* NewConversationView.swift */,
 				21931DFA29DDA3A90013E421 /* ConversationCardContentsView.swift */,
 				21EB2CBB29DF23D1006C6286 /* MugShotGridView.swift */,
 				21EB2CBD29DF249F006C6286 /* UserAvatarView.swift */,
@@ -293,6 +298,7 @@
 				21C03B0029DB2E6000C0153C /* OpaqueProgressView.swift */,
 				21931DDA29DC775F0013E421 /* CaptionLabel.swift */,
 				2145FD5229E4A8B600B84E5C /* TextDate.swift */,
+				21A463D829EC1F5700502D7C /* SearchBox.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -426,6 +432,7 @@
 				21606B8929D474B6004420E8 /* ContentView.swift in Sources */,
 				21931DF429DD77BE0013E421 /* ThumbnailView.swift in Sources */,
 				2156CDC029E84EBE006A24BE /* LocationButton.swift in Sources */,
+				21A463D729EC1C5600502D7C /* NewConversationView.swift in Sources */,
 				21A463CD29E9A9D100502D7C /* InputField.swift in Sources */,
 				21931DE229DCAA0C0013E421 /* Conversation.swift in Sources */,
 				21931DE029DC8ED80013E421 /* ConversationListView.swift in Sources */,
@@ -443,6 +450,7 @@
 				2156CDC829E85413006A24BE /* PhotoCaptureController.swift in Sources */,
 				21C03AFB29DA2E4400C0153C /* User.swift in Sources */,
 				2156CDB129E6F701006A24BE /* ChatInputBox.swift in Sources */,
+				21A463D929EC1F5700502D7C /* SearchBox.swift in Sources */,
 				2145FD4F29E3794D00B84E5C /* ChatBubbleView.swift in Sources */,
 				21931DDD29DC7AC90013E421 /* LogoutButton.swift in Sources */,
 				21931DE629DCACE30013E421 /* UserPreference.swift in Sources */,
@@ -513,7 +521,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -567,7 +575,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

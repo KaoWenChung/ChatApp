@@ -45,10 +45,17 @@ struct ConversationListView: View {
                 }
                 Spacer()
                 if isPreview {
-                    // TODO: ChatRoomView
-//                    NavigationLink(destination: )
+                    NavigationLink(
+                        destination: ChatRoomView(user: user, conversation: conversation),
+                        isActive: $showConversation) { EmptyView() }
                 } else {
-                    // TODO: ChatRoomView
+                    if let realmUser = app.currentUser {
+                        NavigationLink(destination: ChatRoomView(user: user,
+                                                                 conversation: conversation)
+                            .environment(\.realmConfiguration,
+                                          realmUser.configuration(partitionValue: "user=\(user.id)")),
+                                       isActive: $showConversation) { EmptyView()}
+                    }
                 }
             }
         }
