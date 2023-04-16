@@ -48,6 +48,7 @@
 		21A463D529EA12B700502D7C /* OnlineAlertSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A463D429EA12B700502D7C /* OnlineAlertSettings.swift */; };
 		21A463D729EC1C5600502D7C /* NewConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A463D629EC1C5600502D7C /* NewConversationView.swift */; };
 		21A463D929EC1F5700502D7C /* SearchBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A463D829EC1F5700502D7C /* SearchBox.swift */; };
+		21A463DB29EC257E00502D7C /* SaveConversationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A463DA29EC257E00502D7C /* SaveConversationButton.swift */; };
 		21C03AF229DA1AEA00C0153C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21C03AF129DA1AEA00C0153C /* RealmSwift */; };
 		21C03AF529DA1BDF00C0153C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C03AF429DA1BDF00C0153C /* AppState.swift */; };
 		21C03AF829DA2D0100C0153C /* LoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C03AF729DA2D0100C0153C /* LoggedInView.swift */; };
@@ -106,6 +107,7 @@
 		21A463D429EA12B700502D7C /* OnlineAlertSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineAlertSettings.swift; sourceTree = "<group>"; };
 		21A463D629EC1C5600502D7C /* NewConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationView.swift; sourceTree = "<group>"; };
 		21A463D829EC1F5700502D7C /* SearchBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBox.swift; sourceTree = "<group>"; };
+		21A463DA29EC257E00502D7C /* SaveConversationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveConversationButton.swift; sourceTree = "<group>"; };
 		21C03AF429DA1BDF00C0153C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		21C03AF729DA2D0100C0153C /* LoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
 		21C03AFA29DA2E4400C0153C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				21931DDF29DC8ED80013E421 /* ConversationListView.swift */,
 				21931DF829DDA34B0013E421 /* ConversationCardView.swift */,
 				21A463D629EC1C5600502D7C /* NewConversationView.swift */,
+				21A463DA29EC257E00502D7C /* SaveConversationButton.swift */,
 				21931DFA29DDA3A90013E421 /* ConversationCardContentsView.swift */,
 				21EB2CBB29DF23D1006C6286 /* MugShotGridView.swift */,
 				21EB2CBD29DF249F006C6286 /* UserAvatarView.swift */,
@@ -431,6 +434,7 @@
 				21931DF629DD78C80013E421 /* Thumbnail.swift in Sources */,
 				21606B8929D474B6004420E8 /* ContentView.swift in Sources */,
 				21931DF429DD77BE0013E421 /* ThumbnailView.swift in Sources */,
+				21A463DB29EC257E00502D7C /* SaveConversationButton.swift in Sources */,
 				2156CDC029E84EBE006A24BE /* LocationButton.swift in Sources */,
 				21A463D729EC1C5600502D7C /* NewConversationView.swift in Sources */,
 				21A463CD29E9A9D100502D7C /* InputField.swift in Sources */,

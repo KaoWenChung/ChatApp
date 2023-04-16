@@ -45,12 +45,55 @@ struct NewConversationView: View {
                     InputField(title: "Chat Name", text: $name)
                     CaptionLabel(title: "Add members")
                     SearchBox(searchText: searchBinding)
+                    List {
+                        ForEach(memberList, id: \.self) { candidateMember in
+                            Button(action: { addMember(candidateMember) }) {
+                                HStack {
+                                    Text(candidateMember)
+                                    Spacer()
+                                    Image(systemName: "plus.circle.fill")
+                                        .renderingMode(.original)
+                                }
+                            }
+                        }
+                    }
+                    Divider()
+                    CaptionLabel(title: "Members")
+                    List {
+                        ForEach(members, id: \.self) { member in
+                            Text(member)
+                        }
+                        .onDelete(perform: deleteMember)
+                    }
+                    Spacer()
+                }
+                Spacer()
+                if let error = state.error {
+                    Text("Error: \(error)")
+                        .foregroundColor(Color.red)
                 }
             }
+            .padding()
+            .navigationBarTitle("New Chat", displayMode: .inline)
+            .navigationBarItems(leading: Button("Dismiss") { presentationMode.wrappedValue.dismiss() },
+                                trailing: VStack {
+                if isPreview {
+//                    SaveConten
+                }
+            })
         }
     }
-    private func searchUsers() {
+
+    private func addMember(_ member: String) {
         
+    }
+
+    private func deleteMember(at index: IndexSet) {
+        
+    }
+
+    private func searchUsers() {
+
     }
 }
 
