@@ -26,6 +26,8 @@ struct ChatRoomView: View {
 
 struct ChatRoomView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatRoomView(user: .sample)
+        Realm.bootstrap()
+
+        return ChatRoomView(user: .sample)
     }
 }

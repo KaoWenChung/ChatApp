@@ -89,7 +89,9 @@ struct ChatRoomBubblesView: View {
 
 struct ChatRoomBubblesView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatRoomBubblesView(user: .sample, isPreview: true)
+        Realm.bootstrap()
+
+        return ChatRoomBubblesView(user: .sample, isPreview: true)
             .environmentObject(AppState.sample)
     }
 }

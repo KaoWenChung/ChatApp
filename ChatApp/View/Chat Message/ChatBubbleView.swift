@@ -41,6 +41,8 @@ struct ChatBubbleView: View {
 
 struct ChatBubbleView_Previews: PreviewProvider {
     static var previews: some View {
+        Realm.bootstrap()
+
         return Group {
             ChatBubbleView(chatMessage: .sample, authorName: "Tim", isPreview: true)
             ChatBubbleView(chatMessage: .sample2, authorName: "Tom", isPreview: true)

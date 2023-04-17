@@ -70,7 +70,8 @@ struct ConversationListView: View {
 
 struct ConversationListView_Previews: PreviewProvider {
     static var previews: some View {
-        ConversationListView(user: .sample)
-        
+        Realm.bootstrap()
+
+        return ConversationListView(user: .sample)
     }
 }
