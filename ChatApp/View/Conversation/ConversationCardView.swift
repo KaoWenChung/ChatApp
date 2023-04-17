@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ConversationCardView: View {
     let conversation: Conversation
@@ -13,15 +14,23 @@ struct ConversationCardView: View {
 
     var body: some View {
         VStack {
-//            if isPreview {
-//                Conversation
-//            }
+            if isPreview {
+                ConversationCardContentsView(conversation: conversation)
+            } else {
+                ConversationCardContentsView(conversation: conversation)
+                    .environment(\.realmConfiguration,
+                                  app.currentUser!.configuration(partitionValue: "all-users=all-the-users"))
+            }
         }
     }
 }
 
-//struct ConversationCardView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ConversationCardView()
-//    }
-//}
+struct ConversationCardView_Previews: PreviewProvider {
+    static var previews: some View {
+        Realm.bootstrap()
+
+        return ConversationCardView(conversation: .sample, isPreview: true)
+            .padding()
+            .previewLayout(.sizeThatFits)
+    }
+}

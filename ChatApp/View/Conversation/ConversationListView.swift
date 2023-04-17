@@ -63,7 +63,10 @@ struct ConversationListView: View {
             $user.presenceState.wrappedValue = .onLine
         }
         .sheet(isPresented: $showingAddChat) {
-            // TODO: NewConversationView
+            NewConversationView(user: user)
+                .environmentObject(state)
+                .environment(\.realmConfiguration,
+                              app.currentUser!.configuration(partitionValue: "all-users=all-the-users"))
         }
     }
 }
