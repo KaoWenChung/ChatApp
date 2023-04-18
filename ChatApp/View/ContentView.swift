@@ -32,6 +32,7 @@ struct ContentView: View {
                             .foregroundColor(.red)
                     }
                     if state.busyCount > 0 {
+                        OpaqueProgressView("Working with Realm")
                     }
                 }
             }
@@ -81,16 +82,6 @@ struct ContentView: View {
         let center = UNUserNotificationCenter.current()
         center.removeAllDeliveredNotifications()
         center.removeAllPendingNotificationRequests()
-    }
-}
-
-extension View {
-    public func currentDeviceNavigationViewStyle(alwaysStacked: Bool) -> AnyView {
-        if UIDevice.current.userInterfaceIdiom == .pad && !alwaysStacked {
-            return AnyView(self.navigationViewStyle(DefaultNavigationViewStyle()))
-        } else {
-            return AnyView(self.navigationViewStyle(StackNavigationViewStyle()))
-        }
     }
 }
 
