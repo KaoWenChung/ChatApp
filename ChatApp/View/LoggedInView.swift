@@ -20,9 +20,14 @@ struct LoggedInView: View {
         ZStack {
             if let user = users.first {
                 if showingProfileView {
-                    
+                    SetUserProfileView(user: user, isPresented: $showingProfileView, userID: $userID)
                 } else {
-                    
+                    ConversationListView(user: user)
+                        .navigationBarItems(trailing: state.loggedIn && !state.shouldIndicateActivity ?
+                                            UserAvatarView(photo: user.userPreference?.avatarImage,
+                                                           online: true) {
+                            showingProfileView.toggle()
+                        } : nil)
                 }
             }
         }
