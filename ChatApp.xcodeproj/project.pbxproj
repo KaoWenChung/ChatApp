@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		211EB3C629F1EBC900AB56AC /* ThumbnailWithExpand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211EB3C529F1EBC900AB56AC /* ThumbnailWithExpand.swift */; };
 		2145FD4F29E3794D00B84E5C /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145FD4E29E3794D00B84E5C /* ChatBubbleView.swift */; };
 		2145FD5129E4A63A00B84E5C /* AuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145FD5029E4A63A00B84E5C /* AuthorView.swift */; };
 		2145FD5329E4A8B600B84E5C /* TextDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145FD5229E4A8B600B84E5C /* TextDate.swift */; };
@@ -67,6 +68,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		211EB3C529F1EBC900AB56AC /* ThumbnailWithExpand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailWithExpand.swift; sourceTree = "<group>"; };
 		2145FD4E29E3794D00B84E5C /* ChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
 		2145FD5029E4A63A00B84E5C /* AuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorView.swift; sourceTree = "<group>"; };
 		2145FD5229E4A8B600B84E5C /* TextDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDate.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			children = (
 				21931DEF29DD74D20013E421 /* AvatarButton.swift */,
 				2156CDB229E6FD29006A24BE /* ThumbnailWithDelete.swift */,
+				211EB3C529F1EBC900AB56AC /* ThumbnailWithExpand.swift */,
 				21931DF129DD774B0013E421 /* AvatarThumbNailView.swift */,
 				21EB2CC129DF2681006C6286 /* BlankPersonIconView.swift */,
 				21EB2CBF29DF2591006C6286 /* ThumbnailPhotoView.swift */,
@@ -430,6 +433,7 @@
 			files = (
 				21931DFD29DDA4050013E421 /* Chatster.swift in Sources */,
 				21931DE829DCAD6D0013E421 /* Photo.swift in Sources */,
+				211EB3C629F1EBC900AB56AC /* ThumbnailWithExpand.swift in Sources */,
 				2156CDC229E84F42006A24BE /* AttachButton.swift in Sources */,
 				21C03AFE29DB07C600C0153C /* LoginView.swift in Sources */,
 				21A463D529EA12B700502D7C /* OnlineAlertSettings.swift in Sources */,

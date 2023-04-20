@@ -24,17 +24,39 @@ struct ChatBubbleView: View {
         HStack {
             if isMyMessage { Spacer().frame(width: Dimensions.horizontalOffset) }
             VStack {
-                if let authorName {
-                    if isPreview {
-                        AuthorView(userName: authorName)
-                    } else {
-                        AuthorView(userName: authorName)
-                            .environment(\.realmConfiguration,
-                                          app.currentUser!.configuration(partitionValue: "all-users=all-the-users"))
+                HStack {
+                    if let authorName {
+                        if isPreview {
+                            AuthorView(userName: authorName)
+                        } else {
+                            AuthorView(userName: authorName)
+                                .environment(\.realmConfiguration,
+                                              app.currentUser!.configuration(partitionValue: "all-users=all-the-users"))
+                        }
                     }
+                    Spacer()
+                    TextDate(date: chatMessage.timestamp)
                 }
-                Spacer()
+                HStack {
+                    if let photo = chatMessage.image {
+                        ThumbnailWithExpand(photo: photo)
+                            .padding(Dimensions.padding)
+                    }
+                    if let location = chatMessage.location {
+                        if location.count == 2 {
+                            // TODO: MapThumbnailWithExpand
+                        }
+                    }
+                    if chatMessage.text != "" {
+                        // TODO: MarkDown
+                    }
+                    Spacer()
+                }
             }
+            .padding(Dimensions.padding)
+            .background(Color(isMyMessage ? "MyBubble" : "OtherBubble"))
+            .clipShape(RoundedRectangle(cornerRadius: Dimensions.cornerRadius))
+            if !isMyMessage { Spacer().frame(width: Dimensions.horizontalOffset) }
         }
     }
 }
