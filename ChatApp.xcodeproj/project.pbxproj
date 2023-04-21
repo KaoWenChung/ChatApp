@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		211EB3C629F1EBC900AB56AC /* ThumbnailWithExpand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211EB3C529F1EBC900AB56AC /* ThumbnailWithExpand.swift */; };
 		211EB3C829F346E600AB56AC /* MapThumbnailWithExpand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211EB3C729F346E600AB56AC /* MapThumbnailWithExpand.swift */; };
+		211EB3CA29F34AE200AB56AC /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211EB3C929F34AE200AB56AC /* MapView.swift */; };
 		2145FD4F29E3794D00B84E5C /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145FD4E29E3794D00B84E5C /* ChatBubbleView.swift */; };
 		2145FD5129E4A63A00B84E5C /* AuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145FD5029E4A63A00B84E5C /* AuthorView.swift */; };
 		2145FD5329E4A8B600B84E5C /* TextDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145FD5229E4A8B600B84E5C /* TextDate.swift */; };
@@ -71,6 +72,7 @@
 /* Begin PBXFileReference section */
 		211EB3C529F1EBC900AB56AC /* ThumbnailWithExpand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailWithExpand.swift; sourceTree = "<group>"; };
 		211EB3C729F346E600AB56AC /* MapThumbnailWithExpand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapThumbnailWithExpand.swift; sourceTree = "<group>"; };
+		211EB3C929F34AE200AB56AC /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		2145FD4E29E3794D00B84E5C /* ChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
 		2145FD5029E4A63A00B84E5C /* AuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorView.swift; sourceTree = "<group>"; };
 		2145FD5229E4A8B600B84E5C /* TextDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			children = (
 				2156CDBA29E74988006A24BE /* MapThumbnailWithDelete.swift */,
 				211EB3C729F346E600AB56AC /* MapThumbnailWithExpand.swift */,
+				211EB3C929F34AE200AB56AC /* MapView.swift */,
 			);
 			path = Maps;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				2145FD5129E4A63A00B84E5C /* AuthorView.swift in Sources */,
 				2156CDBB29E74988006A24BE /* MapThumbnailWithDelete.swift in Sources */,
 				21931DFB29DDA3A90013E421 /* ConversationCardContentsView.swift in Sources */,
+				211EB3CA29F34AE200AB56AC /* MapView.swift in Sources */,
 				21EB2CBE29DF249F006C6286 /* UserAvatarView.swift in Sources */,
 				21EB2CC929DF4284006C6286 /* ChatRoomBubblesView.swift in Sources */,
 				21931DF029DD74D20013E421 /* AvatarButton.swift in Sources */,
