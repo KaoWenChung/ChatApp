@@ -22,12 +22,17 @@ struct ThumbnailWithExpand: View {
 
     var body: some View {
         VStack {
-            Button(action: { showingFullImage = true }) {
+            Button(action: {
+                showingFullImage = true
+            },
+                   label: {
                 ThumbnailView(photo: photo)
                     .frame(width: Dimensions.imageSize, height: Dimensions.imageSize, alignment: .center)
                     .clipShape(RoundedRectangle(cornerRadius: Dimensions.radius))
+            })
+            NavigationLink(destination: PhotoFullSizeView(photo: photo), isActive: $showingFullImage) {
+                EmptyView()
             }
-            // TODO: PhotoFullSizeView
         }
     }
 }

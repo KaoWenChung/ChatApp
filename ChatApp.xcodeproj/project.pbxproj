@@ -10,6 +10,7 @@
 		211EB3C629F1EBC900AB56AC /* ThumbnailWithExpand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211EB3C529F1EBC900AB56AC /* ThumbnailWithExpand.swift */; };
 		211EB3C829F346E600AB56AC /* MapThumbnailWithExpand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211EB3C729F346E600AB56AC /* MapThumbnailWithExpand.swift */; };
 		211EB3CA29F34AE200AB56AC /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211EB3C929F34AE200AB56AC /* MapView.swift */; };
+		211EB3CC29F5DC0500AB56AC /* PhotoFullSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211EB3CB29F5DC0500AB56AC /* PhotoFullSizeView.swift */; };
 		2145FD4F29E3794D00B84E5C /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145FD4E29E3794D00B84E5C /* ChatBubbleView.swift */; };
 		2145FD5129E4A63A00B84E5C /* AuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145FD5029E4A63A00B84E5C /* AuthorView.swift */; };
 		2145FD5329E4A8B600B84E5C /* TextDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2145FD5229E4A8B600B84E5C /* TextDate.swift */; };
@@ -73,6 +74,7 @@
 		211EB3C529F1EBC900AB56AC /* ThumbnailWithExpand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailWithExpand.swift; sourceTree = "<group>"; };
 		211EB3C729F346E600AB56AC /* MapThumbnailWithExpand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapThumbnailWithExpand.swift; sourceTree = "<group>"; };
 		211EB3C929F34AE200AB56AC /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		211EB3CB29F5DC0500AB56AC /* PhotoFullSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFullSizeView.swift; sourceTree = "<group>"; };
 		2145FD4E29E3794D00B84E5C /* ChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
 		2145FD5029E4A63A00B84E5C /* AuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorView.swift; sourceTree = "<group>"; };
 		2145FD5229E4A8B600B84E5C /* TextDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDate.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 				21C03B0029DB2E6000C0153C /* OpaqueProgressView.swift */,
 				21931DDA29DC775F0013E421 /* CaptionLabel.swift */,
 				2145FD5229E4A8B600B84E5C /* TextDate.swift */,
+				211EB3CB29F5DC0500AB56AC /* PhotoFullSizeView.swift */,
 				21A463D829EC1F5700502D7C /* SearchBox.swift */,
 			);
 			path = Components;
@@ -471,6 +474,7 @@
 				21C03B0129DB2E6000C0153C /* OpaqueProgressView.swift in Sources */,
 				21931DED29DD70FF0013E421 /* SetUserProfileView.swift in Sources */,
 				2156CDB829E734CC006A24BE /* ButtonTemplate.swift in Sources */,
+				211EB3CC29F5DC0500AB56AC /* PhotoFullSizeView.swift in Sources */,
 				2145FD5329E4A8B600B84E5C /* TextDate.swift in Sources */,
 				21A463D129E9AC1C00502D7C /* CallToActionButton.swift in Sources */,
 				2156CDBE29E74A84006A24BE /* MyAnnotationItem.swift in Sources */,
