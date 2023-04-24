@@ -48,7 +48,8 @@ struct ChatBubbleView: View {
                         }
                     }
                     if chatMessage.text != "" {
-                        // TODO: MarkDown
+                        MarkDown(text: chatMessage.text)
+                            .padding(Dimensions.padding)
                     }
                     Spacer()
                 }
