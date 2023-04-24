@@ -44,7 +44,8 @@ struct ChatBubbleView: View {
                     }
                     if let location = chatMessage.location {
                         if location.count == 2 {
-                            // TODO: MapThumbnailWithExpand
+                            MapThumbnailWithExpand(location: location.map { $0 })
+                                .padding(Dimensions.padding)
                         }
                     }
                     if chatMessage.text != "" {
